@@ -1,36 +1,18 @@
-# Advanced Script Template
+# Building Quick APIs
 
-An advanced template with all the bells and whistles in script format
+In this session we will use ColdBox’s built in REST BaseHandler, and with CBSecurity and Quick ORM we will setup a secure API using fluent query language - and you’ll see how Quick Quick development can be!
 
-## License
+Presented at Into the Box - https://intothebox.org/
 
-Apache License, Version 2.0.
+## Slides
 
-## Important Links
+Download Link for the slides from Into the Box 2021 - Presented by Gavin Pickin
+https://drive.google.com/file/d/1kV80Iy_9fyrHKbn3nbzr4Fr4AEJVsoUH/view?usp=sharing
 
-Source Code
+## Repo
 
-- https://github.com/coldbox-templates/advanced-script
+https://github.com/gpickin/itb2021-building-quick-apis
 
-## Quick Installation
+## Video
 
-Each application templates contains a `box.json` so it can leverage [CommandBox](http://www.ortussolutions.com/products/commandbox) for its dependencies.  
-Just go into each template directory and type:
-
-```bash
-box install
-```
-
-This will setup all the needed dependencies for each application template.  You can then type:
-
-```bash
-box server start
-```
-
-And run the application.
-
----
- 
-### THE DAILY BREAD
-
- > "I am the way, and the truth, and the life; no one comes to the Father, but by me (JESUS)" Jn 14:1-12
+Will be available on CF Casts soon
