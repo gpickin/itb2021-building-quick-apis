@@ -1,0 +1,10 @@
+{
+    "web":{
+        "http":{
+            "port":"53163"
+        },
+        "rewrites":{
+            "enable":"true"
+        }
+    }
+}
