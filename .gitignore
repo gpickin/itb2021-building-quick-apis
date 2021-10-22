@@ -18,3 +18,5 @@ coldbox/*
 testbox/*
 modules/*
 modules/**/apidocs/**
+workbench/cflint
+workbench/apidocs
