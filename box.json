@@ -1,45 +1,53 @@
 {
-    "name":"soapbox-api",
-    "version":"1.0.0",
-    "author":"You",
-    "location":"",
-    "slug":"soapbox-api",
-    "createPackageDirectory":false,
-    "type":"mvc",
-    "keywords":"",
-    "homepage":"",
-    "documentation":"",
-    "repository":{
-        "type":"",
-        "url":""
-    },
-    "bugs":"",
-    "shortDescription":"",
-    "contributors":[],
-    "ignore":[],
-    "devDependencies":{
-        "testbox":"^4.2.1+400",
-        "commandbox-dotenv":"*",
-        "commandbox-cfconfig":"*",
-        "commandbox-cfformat":"*"
-    },
-    "installPaths":{
-        "coldbox":"coldbox/",
-        "testbox":"testbox/",
-        "route-visualizer":"modules/route-visualizer/",
-        "cbsecurity":"modules/cbsecurity/",
-        "quick":"modules/quick/",
-        "cbvalidation":"modules/cbvalidation/"
-    },
-    "dependencies":{
-        "coldbox":"^6.0.0",
-        "route-visualizer":"^1.4.0+24",
-        "cbsecurity":"^2.13.0+6",
-        "quick":"^4.2.4",
-        "cbvalidation":"^3.1.1+186"
-    },
-    "scripts":{},
-    "testbox":{
-        "runner":"http://127.0.0.1:53163/tests/runner.cfm"
-    }
+	"name": "soapbox-api",
+	"version": "1.0.0",
+	"author": "You",
+	"location": "",
+	"slug": "soapbox-api",
+	"createPackageDirectory": false,
+	"type": "mvc",
+	"keywords": "",
+	"homepage": "",
+	"documentation": "",
+	"repository": {
+		"type": "",
+		"url": ""
+	},
+	"bugs": "",
+	"shortDescription": "",
+	"contributors": [],
+	"ignore": [],
+	"devDependencies": {
+		"testbox": "^4.2.1+400",
+		"commandbox-dotenv": "*",
+		"commandbox-cfconfig": "*",
+		"commandbox-cfformat": "*"
+	},
+	"installPaths": {
+		"coldbox": "coldbox/",
+		"testbox": "testbox/",
+		"route-visualizer": "modules/route-visualizer/",
+		"cbsecurity": "modules/cbsecurity/",
+		"quick": "modules/quick/",
+		"cbvalidation": "modules/cbvalidation/"
+	},
+	"dependencies": {
+		"coldbox": "^6.0.0",
+		"route-visualizer": "^1.4.0+24",
+		"cbsecurity": "^2.13.0+6",
+		"quick": "^4.2.4",
+		"cbvalidation": "^3.1.1+186"
+	},
+	"scripts": {
+		"docs": "task run workbench/RunDocs.cfc",
+		"swagger": "task run workbench/RunSwagger.cfc",
+		"lint": "run-script lint:error && run-script lint:warning",
+		"lint:error": "cflint reportLevel=ERROR fileName=workbench/cflint/cflint-results-error pattern=handlers/*.cfc,interceptors/*.cf*,views/**.cf*,modules_app/**/*.cf*,workbench/tests/specs/**/*.cf*, --html --!exitOnError --suppress",
+		"lint:warning": "cflint reportLevel=WARNING fileName=workbench/cflint/cflint-results-warning pattern=handlers/*.cfc,interceptors/*.cf*,views/**.cf*,modules_app/**/*.cf*,workbench/tests/specs/**/*.cf*, --html --!exitOnError --suppress",
+		"format": "cfformat run settingsPath=.cfformat.json path=handlers/*.cfc,interceptors/*.cfc,modules_app/**/*.cfc,tests/specs/**/*.cf* --overwrite",
+		"format:check": "cfformat check settingsPath=.cfformat.json path=handlers/*.cfc,interceptors/*.cfc,modules_app/**/*.cfc,tests/specs/**/*.cf*"
+	},
+	"testbox": {
+		"runner": "http://127.0.0.1:53163/tests/runner.cfm"
+	}
 }
