@@ -7,16 +7,28 @@ Component {
 		delete( "/logout", "session.delete" );
 
 		resources(
-			resource = "users",
-			handler = "users",
+			resource      = "users",
+			handler       = "users",
 			parameterName = "userID",
-			only = [ "index", "show", "create", "update", "delete" ]
+			only          = [
+				"index",
+				"show",
+				"create",
+				"update",
+				"delete"
+			]
 		);
 		resources(
-			resource = "rants",
-			handler = "rants",
+			resource      = "rants",
+			handler       = "rants",
 			parameterName = "rantID",
-			only = [ "index", "show", "create", "update", "delete" ]
+			only          = [
+				"index",
+				"show",
+				"create",
+				"update",
+				"delete"
+			]
 		);
 
 		get( "/", "main.index" );

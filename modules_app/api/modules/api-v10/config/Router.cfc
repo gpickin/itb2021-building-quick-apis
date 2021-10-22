@@ -2,10 +2,16 @@ Component {
 
 	function configure() {
 		resources(
-			resource = "users",
-			handler = "users",
+			resource      = "users",
+			handler       = "users",
 			parameterName = "userID",
-			only = [ "index", "show", "create", "update", "delete" ]
+			only          = [
+				"index",
+				"show",
+				"create",
+				"update",
+				"delete"
+			]
 		);
 
 		get( "/", "main.index" );
